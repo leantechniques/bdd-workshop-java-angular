@@ -1,9 +1,14 @@
-import 'jest-preset-angular/setup-jest';
+import 'zone.js/dist/zone-node';
+import 'zone.js/testing';
+import 'jest-preset-angular';
 import '@testing-library/jest-dom';
 import '@testing-library/jest-dom/extend-expect';
 import { configure } from '@testing-library/dom';
 import { TestBed } from '@angular/core/testing';
-import { BrowserDynamicTestingModule, platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic/testing';
+import {
+  BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting,
+} from '@angular/platform-browser-dynamic/testing';
 
 configure({
   testIdAttribute: 'data-cy',
@@ -11,9 +16,13 @@ configure({
 
 beforeEach(() => {
   TestBed.resetTestEnvironment();
-  TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting(), {
-    teardown: { destroyAfterEach: true },
-  });
+  TestBed.initTestEnvironment(
+    BrowserDynamicTestingModule,
+    platformBrowserDynamicTesting(),
+    {
+      teardown: { destroyAfterEach: true },
+    },
+  );
 });
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
