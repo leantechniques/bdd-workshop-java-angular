@@ -1,6 +1,6 @@
-package com.controllers;
+package bdd.controllers;
 
-import com.services.WorkshopService;
+import bdd.services.WorkshopService;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;

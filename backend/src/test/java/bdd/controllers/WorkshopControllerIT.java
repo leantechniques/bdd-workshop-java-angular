@@ -1,6 +1,6 @@
-package com.controllers;
+package bdd.controllers;
 
-import com.services.WorkshopService;
+import bdd.services.WorkshopService;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,12 +10,11 @@ import static junit.framework.TestCase.assertEquals;
 
 public class WorkshopControllerIT {
 
-    private WorkshopService service;
     private WorkshopController controller;
 
     @Before
     public void Setup() {
-        service = new WorkshopService();
+        WorkshopService service = new WorkshopService();
         controller = new WorkshopController(service);
     }
 
