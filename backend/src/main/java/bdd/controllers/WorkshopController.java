@@ -3,6 +3,7 @@ package bdd.controllers;
 
 import bdd.services.WorkshopService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,6 +20,7 @@ public class WorkshopController {
         this.service = service;
     }
 
+    @CrossOrigin
     @GetMapping("/states")
     public List<String > getAllStates() {
         return service.getStates();
