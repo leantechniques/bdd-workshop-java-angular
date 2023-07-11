@@ -11,7 +11,7 @@
 
 ## Main dependencies
 
-* Java 12
+* Java 11
 * Node 14
 * Angular 12
 * Angular Testing Library
